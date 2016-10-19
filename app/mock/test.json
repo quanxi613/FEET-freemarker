@@ -1,0 +1,17 @@
+{
+ "file":"test.ftl",
+ "data":{
+     "word":"World",
+     "name": "quanxi",
+     "lists": [
+     	{
+     		"name": "luyao",
+     		"age": 27
+     	},
+     	{
+     		"name": "quanxi",
+     		"age": 28
+     	}
+     ]
+ }
+}

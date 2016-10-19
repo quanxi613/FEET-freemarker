@@ -1,0 +1,4 @@
+{
+  "uglify": false,
+  "dist": "./dist/"
+}
