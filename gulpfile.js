@@ -26,7 +26,7 @@ gulp.task('connect', function () {
   	});
 
   	gulp.watch('./app/src/css/**/*.less', ['less', reload]);
-	gulp.watch('./app/ftl/**/*.ftl', ['ftl', reload]);
+	gulp.watch('./app/WEB-INF/view/**/*.ftl', ['ftl', reload]);
 	gulp.watch('./app/src/js/**/*.js', ['js', reload]);
 	gulp.watch('./app/src/js/**/*.hbs', ['jstpl', reload]);
 });
@@ -34,11 +34,11 @@ gulp.task('connect', function () {
 gulp.task('ftl', function () {
   return gulp.src('./app/mock/**/*.json')
     .pipe($.freemarker({
-        viewRoot: __dirname + '/app/ftl/',
+        viewRoot: __dirname + '/app/WEB-INF/view/',
         options: {}
     }))
     .pipe(ext_replace('.html'))
-    .pipe(gulp.dest('./dist/ftl'));
+    .pipe(gulp.dest('./dist/WEB-INF/view'));
 });
 
 gulp.task('img', function () {
